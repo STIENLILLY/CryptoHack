@@ -24,21 +24,29 @@ from Crypto.Util.number import bytes_to_long, long_to_bytes
 # myXORkey
 
 
-XOR = "0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104"
-b = bytes.fromhex(XOR)
+# XOR = "0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104"
+# b = bytes.fromhex(XOR)
 
-print(b)
+# print(b)
 
-myXORkey = "myXORkey"
+# myXORkey = "myXORkey"
 
-s = ''
-l = 0
-for i in b:
-    # print(i)
-    s += chr(i ^ ord(myXORkey[l % 8]))
-    l += 1
+# s = ''
+# l = 0
+# for i in b:
+#     # print(i)
+#     s += chr(i ^ ord(myXORkey[l % 8]))
+#     l += 1
 
-print(s)
 # print(s)
-# print(XOR)
+
+
 # print(''.join(list(map(lambda x: chr(ord(x) ^ myXORkey), XOR))))
+
+
+# im3 = ImageChops.logical_xor(t, f) -> not work
+# imagemagick is work
+
+
+# im3.save('./test.png')
+# print(np.array(im3))
